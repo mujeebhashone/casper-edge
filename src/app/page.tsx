@@ -12,13 +12,13 @@ export default function Home() {
             <Banner/>
             <div className="relative">
               {/* Gradient/Shadow effect here */}
-              <div className="absolute left-1/2 -translate-x-1/2 -top-16 w-[900px] h-[180px] pointer-events-none z-10"
+              {/* <div className="absolute left-1/2 -translate-x-1/2 -top-16 w-[900px] h-[180px] pointer-events-none z-10"
                    style={{
                      background: "radial-gradient(ellipse 60% 40% at 50% 0%, #FDF5F4 0%, transparent 100%)",
                      filter: "blur(8px)",
                    }}
               >
-              </div>
+              </div> */}
               <BannerBottomSection />
               
             </div>

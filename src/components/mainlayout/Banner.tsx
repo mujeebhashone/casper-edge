@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Banner = () => {
   return (
-    <section className="w-full bg-white rounded-b-xl px-12 py-40 flex items-center justify-between gap-x-12 min-h-[420px]">
+    <section className="w-full bg-white rounded-b-xl px-12 py-40 flex flex-col gap-y-12 md:gap-y-0 md:flex-row items-center justify-between md:gap-x-12 min-h-[420px]">
       {/* Left Side */}
       <div className="flex-1 max-w-xl">
         <h1 className="text-5xl font-semibold leading-tight text-primary mb-6 font-sans">
@@ -20,7 +20,7 @@ const Banner = () => {
       </div>
       {/* Right Side */}
       <div className="flex-1 flex justify-end">
-        <div className="relative w-[540px] h-[355px] rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative w-full md:w-[540px] h-[355px] rounded-2xl overflow-hidden shadow-lg">
           <video
             src="/assets/videos/banner-video.mp4"
             className="object-cover w-[540px] h-[355px] rounded-2xl"
