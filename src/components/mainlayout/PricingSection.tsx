@@ -14,7 +14,7 @@ const PricingSection = () => (
     <p className="text-base md:text-lg text-[#565F5C] text-center max-w-2xl mb-12 font-sans">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.
     </p>
-    <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch w-full max-w-5xl">
+    <div className="flex flex-col items-center md:flex-row gap-8 justify-center md:items-stretch w-full md:max-w-5xl">
       <PricingCard
         title="1 Week of Access"
         price="$99"
