@@ -20,7 +20,7 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <header className="bg-white px-4 md:px-12 py-4 shadow-sm rounded-tr-xl rounded-tl-xl font-sans relative z-30">
+    <header className="bg-white px-4 md:px-12 py-4 rounded-tr-xl rounded-tl-xl font-sans relative z-30">
       <div className="flex items-center justify-between w-full">
         {/* Logo Section */}
         <div className="flex items-center gap-3">
@@ -28,10 +28,10 @@ const Header = () => {
         </div>
         {/* Nav Links (Desktop) */}
         <nav className="hidden md:flex gap-10 text-base font-normal">
-          <Link href="#practice-questions" className="text-primary no-underline">Practice Questions</Link>
-          <Link href="#pricing" className="text-primary no-underline">Pricing</Link>
-          <Link href="#testimonials" className="text-primary no-underline">Testimonials</Link>
-          <Link href="#blog" className="text-primary no-underline">Blog</Link>
+          <Link href="/practiice-questions" className="text-primary no-underline">Practice Questions</Link>
+          <Link href="/pricing" className="text-primary no-underline">Pricing</Link>
+          <Link href="/testimonials" className="text-primary no-underline">Testimonials</Link>
+          <Link href="/blog" className="text-primary no-underline">Blog</Link>
         </nav>
         {/* Button (Desktop) */}
         <Link href="#" className="hidden md:inline-block bg-secondary text-secondary-foreground rounded-full px-8 py-2 font-semibold text-base shadow font-sans">

@@ -10,6 +10,7 @@ import Faq from "@/components/mainlayout/Faq";
 import TailoredSupport from "@/components/mainlayout/TailoredSupport";
 import SectionHeading from "@/components/mainlayout/SectionHeading";
 
+
 const StickyScrollSection = ({ children, index }: { children: React.ReactNode, index: number }) => {
   const { scrollYProgress } = useScroll();
   
@@ -94,15 +95,19 @@ export default function Home() {
           
         </StickyScrollSection>
         </div>
+        
         <StickyScrollSection index={3}>
           <PricingSection />
         </StickyScrollSection>
         <StickyScrollSection index={4}>
           <PracticingNowSection />
         </StickyScrollSection>
-        <StickyScrollSection index={5}>
+      
           <Faq />
-        </StickyScrollSection>
+           
+        
+        
+       
       
       </div>
     </WebLayout>

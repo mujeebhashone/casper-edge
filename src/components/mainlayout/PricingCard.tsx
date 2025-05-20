@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check} from 'lucide-react';
+import Link from 'next/link';
 
 export interface PricingCardProps {
   title: string;
@@ -8,6 +9,7 @@ export interface PricingCardProps {
   features: string[];
   buttonText: string;
   highlighted?: boolean;
+  links: string;
 }
 
 const PricingCard: React.FC<PricingCardProps> = ({
@@ -17,11 +19,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
   features,
   buttonText,
   highlighted = false,
+  links,
 }) => (
   <div
     className={`flex flex-col bg-[#FDF5F4] rounded-2xl px-8 py-10 drop-shadow-xl transition-all duration-200 min-h-[480px] font-sans ${
       highlighted
-        ? 'border-2 border-secondary shadow-lg scale-105'
+        ? 'border-2 border-secondary shadow-lg scale-105 bg-white'
         : 'border border-transparent'
     }`}
     style={{ minWidth: 335, maxWidth: 350 }}
@@ -31,19 +34,21 @@ const PricingCard: React.FC<PricingCardProps> = ({
       <span className="text-lg font-normal text-[#B0B0C0] align-middle">{pricePeriod}</span>
     </div>
     <div className="font-semibold text-base text-primary mb-4 mt-4 w-full text-left">What&apos;s included</div>
-    <ul className="flex flex-col gap-3 w-full mb-6">
+    <ul className="flex flex-col gap-5 w-full mb-6">
       {features.map((feature) => (
-        <li key={feature} className="flex items-center gap-2 text-lg text-primary">
+        <li key={feature} className="flex items-center gap-2 text-primary">
           <Check className='text-white bg-secondary rounded-full p-1'/>
           <span>{feature}</span>
         </li>
       ))}
     </ul>
+    <Link href={links}>
     <button
       className="mt-auto bg-secondary text-white rounded-full px-8 py-3 font-semibold text-base shadow hover:bg-secondary/90 transition-colors w-full"
     >
       {buttonText}
     </button>
+    </Link>
   </div>
 );
 

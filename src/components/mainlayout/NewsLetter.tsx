@@ -6,20 +6,20 @@ import { Button } from '@/components/ui/button';
 
 const NewsLetter = () => {
   return (
-    <section className="w-full bg-white rounded-2xl px-2 md:px-8 pt-12 flex flex-col items-center font-sans">
-      <div className="w-full max-w-6xl flex flex-col md:flex-row gap-8 md:gap-0 items-start justify-between mx-auto">
+    <section className="w-full bg-white rounded-2xl px-2 md:px-8 p-12 flex flex-col items-center font-sans">
+      <div className="w-full flex flex-col md:flex-row gap-8 md:gap-8 items-start justify-between mx-auto">
         {/* Left: Logo and tagline */}
         <div className="flex-1 flex flex-col items-start justify-start gap-6 pl-2">
           <div className="flex items-center gap-3 mb-2">
             <Image src="/assets/images/logo-casper.png" alt="CASPer Edge" width={340} height={85} />
           </div>
           <div className="text-lg text-[#565F5C] font-sans font-normal">
-            Personalized Medical School Admissions Consulting for All Types of Students
+          Developed by doctors. Designed for success. Thats your CASPer Edge.
           </div>
         </div>
         {/* Right: Form */}
         <form className="flex-1 flex flex-col items-start w-full max-w-xl">
-          <h3 className="text-2xl md:text-2xl font-semibold text-primary mb-6">Want Our Best Med School Tips? We&apos;ll Drop Them in Your Inbox.</h3>
+          <h3 className="text-2xl md:text-2xl font-semibold text-primary mb-6">Do you want to learn how to stand out on medical school applications? Let&apos;s chat!</h3>
           <div className="flex gap-4 w-full mb-4">
             <Input
               type="text"

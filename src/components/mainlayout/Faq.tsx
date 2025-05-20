@@ -5,6 +5,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Plus, Minus } from 'lucide-react';
 import NewsLetter from './NewsLetter';
 
+
 export interface FaqItem {
   question: string;
   answer: string;
@@ -42,7 +43,7 @@ const Faq: React.FC<FaqProps> = ({ items = defaultFaq }) => {
   const [openIndex, setOpenIndex] = React.useState<number | null>(0);
 
   return (
-    <section id='practice-questions' className="w-full bg-white rounded-2xl px-2 md:px-8 py-12 md:py-16 flex flex-col items-center font-sans">
+    <section className="w-full bg-white rounded-2xl px-2 md:px-8 py-12 md:py-16 flex flex-col items-center font-sans relative z-[9999]">
       <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center mb-12">Frequently Asked Questions</h2>
       <div className="w-full max-w-5xl mx-auto">
         <Accordion type="single" collapsible className="w-full" value={openIndex !== null ? String(openIndex) : undefined} onValueChange={v => setOpenIndex(v !== undefined ? Number(v) : null)}>
