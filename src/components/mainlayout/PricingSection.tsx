@@ -1,5 +1,8 @@
+'use client'
+
 import React from 'react';
 import PricingCard from './PricingCard';
+import { usePathname } from 'next/navigation';
 
 const features = [
   'CASPer Edge Course by Dr. Rizal',
@@ -8,8 +11,11 @@ const features = [
   
 ];
 
-const PricingSection = ({className}:{className?:string}) => (
-  <section className={`w-full py-16 px-2 md:px-0 flex flex-col items-center ${className}`}>
+const PricingSection = ({className}:{className?:string}) => {
+  const pathname = usePathname();
+ 
+  return (
+  <section className={`w-full ${pathname === '/' ? 'bg-white' : className} py-16 px-2 md:px-0 flex flex-col items-center md:relative md:z-[999999]`}>
     <h2 className="text-3xl md:text-4xl font-semibold text-primary text-center mb-4 font-sans">Simple Pricing</h2>
     <p className="text-base md:text-lg text-[#565F5C] text-center max-w-2xl mb-12 font-sans">
     Invest in the prep that gives you the edge. Designed by physician admissions experts. Built for your success.
@@ -43,5 +49,6 @@ const PricingSection = ({className}:{className?:string}) => (
     </div>
   </section>
 );
+}
 
 export default PricingSection;

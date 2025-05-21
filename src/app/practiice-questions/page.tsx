@@ -15,7 +15,7 @@ const questions = [
 const page = () => {
   return (
     <WebLayout>
-      <section className="px-40 py-16 font-sans bg-white">
+      <section className="px-4 sm:px-10 md:px-40 py-16 font-sans bg-white">
         <div className="flex flex-col items-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">Scenarios</h1>
           <p className="text-gray-500 text-center max-w-2xl text-lg mb-8">

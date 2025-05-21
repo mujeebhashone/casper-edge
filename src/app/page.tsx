@@ -10,6 +10,16 @@ import Faq from "@/components/mainlayout/Faq";
 import TailoredSupport from "@/components/mainlayout/TailoredSupport";
 import SectionHeading from "@/components/mainlayout/SectionHeading";
 
+function useIsDesktop() {
+  const [isDesktop, setIsDesktop] = React.useState(false);
+  React.useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth >= 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+  return isDesktop;
+}
 
 const StickyScrollSection = ({ children, index }: { children: React.ReactNode, index: number }) => {
   const { scrollYProgress } = useScroll();
@@ -43,6 +53,7 @@ const StickyScrollSection = ({ children, index }: { children: React.ReactNode, i
 };
 
 export default function Home() {
+  const isDesktop = useIsDesktop();
   return (
     <WebLayout>
       <div className="relative h-full">
@@ -52,56 +63,111 @@ export default function Home() {
         
             <div className='w-full bg-white rounded-xl px-12 py-16'>
             <SectionHeading />
-        <StickyScrollSection index={0}>
+            {isDesktop ? (
+              <>
+                <StickyScrollSection index={0}>
+                  <TailoredSupport
+                    heading="Tailored Support for Every Step of Your Medical School Journey"
+                    description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
+                    features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning', 'Reapplication Support']}
+                    imageSrc="/assets/images/doctorimage.png"
+                    imageAlt="Doctor"
+                    imageWidth={475}
+                    imageHeight={382}
+                  />
+                </StickyScrollSection>
+                <StickyScrollSection index={1}>
+                  <TailoredSupport
+                    heading="Tailored Support for Every Step of Your Medical School Journey"
+                    description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
+                    features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
+                    imageSrc="/assets/images/casper-dashboard.png"
+                    imageAlt="Casper Dashboard"
+                    imageWidth={475}
+                    imageHeight={382}
+                  />
+                </StickyScrollSection>
+                <StickyScrollSection index={2}>
+                  <TailoredSupport
+                    heading="Tailored Support"
+                    description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
+                    features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
+                    imageSrc="/assets/images/interview.png"
+                    imageAlt="Interview"
+                    imageWidth={475}
+                    imageHeight={382}
+                  />
+                </StickyScrollSection>
+                <StickyScrollSection index={3}>
+                  <TailoredSupport
+                    heading="Tailored Support"
+                    description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
+                    features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
+                    imageSrc="/assets/images/interview.png"
+                    imageAlt="Interview"
+                    imageWidth={475}
+                    imageHeight={382}
+                  />
+                </StickyScrollSection>
+                
+                
+          <PricingSection />
         
-            <TailoredSupport
-              heading="Tailored Support for Every Step of Your Medical School Journey"
-              description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
-              features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning', 'Reapplication Support']}
-              imageSrc="/assets/images/doctorimage.png"
-              imageAlt="Doctor"
-              imageWidth={475}
-              imageHeight={382}
-            />
-         
-        </StickyScrollSection>
-        
-        <StickyScrollSection index={1}>
-            
-            <TailoredSupport
-              heading="Tailored Support for Every Step of Your Medical School Journey"
-              description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
-              features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
-              imageSrc="/assets/images/casper-dashboard.png"
-              imageAlt="Casper Dashboard"
-              imageWidth={475}
-              imageHeight={382}
-            />
-        </StickyScrollSection>
-          
-        
-        <StickyScrollSection index={2}>
-        
-            
-            <TailoredSupport
-              heading="Tailored Support"
-              description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
-              features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
-              imageSrc="/assets/images/interview.png"
-              imageAlt="Interview"
-              imageWidth={475}
-              imageHeight={382}
-            />
-          
-        </StickyScrollSection>
+     
+          <PracticingNowSection />
+      
+      
+              </>
+            ) : (
+              <>
+                <TailoredSupport
+                  heading="Tailored Support for Every Step of Your Medical School Journey"
+                  description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
+                  features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning', 'Reapplication Support']}
+                  imageSrc="/assets/images/doctorimage.png"
+                  imageAlt="Doctor"
+                  imageWidth={475}
+                  imageHeight={382}
+                />
+                <TailoredSupport
+                  heading="Tailored Support for Every Step of Your Medical School Journey"
+                  description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
+                  features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
+                  imageSrc="/assets/images/casper-dashboard.png"
+                  imageAlt="Casper Dashboard"
+                  imageWidth={475}
+                  imageHeight={382}
+                />
+                <TailoredSupport
+                  heading="Tailored Support"
+                  description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
+                  features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
+                  imageSrc="/assets/images/interview.png"
+                  imageAlt="Interview"
+                  imageWidth={475}
+                  imageHeight={382}
+                />
+                <TailoredSupport
+                  heading="Tailored Support"
+                  description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
+                  features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
+                  imageSrc="/assets/images/interview.png"
+                  imageAlt="Interview"
+                  imageWidth={475}
+                  imageHeight={382}
+                />
+                <PricingSection/>
+                <PracticingNowSection />
+              </>
+            )}
         </div>
         
-        <StickyScrollSection index={3}>
+        {/* <StickyScrollSection index={4}>
           <PricingSection />
         </StickyScrollSection>
-        <StickyScrollSection index={4}>
+        <StickyScrollSection index={5}>
           <PracticingNowSection />
-        </StickyScrollSection>
+        </StickyScrollSection> */}
       
           <Faq />
            

@@ -78,10 +78,10 @@ const Header = () => {
             </svg>
           </button>
           <nav className="flex flex-col gap-4 text-base font-normal mt-10">
-            <Link href="#practice-questions" className="text-primary no-underline" onClick={() => setMenuOpen(false)}>Practice Questions</Link>
-            <Link href="#pricing" className="text-primary no-underline" onClick={() => setMenuOpen(false)}>Pricing</Link>
-            <Link href="#testimonials" className="text-primary no-underline" onClick={() => setMenuOpen(false)}>Testimonials</Link>
-            <Link href="#blog" className="text-primary no-underline" onClick={() => setMenuOpen(false)}>Blog</Link>
+            <Link href="/practice-questions" className="text-primary no-underline" onClick={() => setMenuOpen(false)}>Practice Questions</Link>
+            <Link href="/pricing" className="text-primary no-underline" onClick={() => setMenuOpen(false)}>Pricing</Link>
+            <Link href="/testimonials" className="text-primary no-underline" onClick={() => setMenuOpen(false)}>Testimonials</Link>
+            <Link href="/blog" className="text-primary no-underline" onClick={() => setMenuOpen(false)}>Blog</Link>
           </nav>
           <Link href="#" className="bg-secondary text-secondary-foreground rounded-full px-6 py-2 font-semibold text-base shadow font-sans text-center mt-4" onClick={() => setMenuOpen(false)}>
             Start Practice

@@ -80,9 +80,9 @@ const CheckoutPage = () => {
 
   return (
     <WebLayout>
-    <div className="flex flex-col md:flex-row gap-8 justify-center items-start p-8 min-h-[80vh] font-sans bg-[#FDF5F4]">
+    <div className="flex flex-col lg:flex-row gap-8 justify-center items-start md:p-8 min-h-[80vh] font-sans bg-[#FDF5F4]">
       {/* Left: Personal & Payment Details */}
-      <div className="bg-white rounded-xl shadow-md p-8 flex-1">
+      <div className="bg-white rounded-xl shadow-md md:p-8 p-2 flex-1">
         <Button variant="ghost" className="mb-4 px-0 font-medium bg-transparent text-primary flex items-center w-fit gap-2" type="button">
             <Link href="/pricing">
                 <ArrowLeft size={28} />
@@ -179,11 +179,11 @@ const CheckoutPage = () => {
                 <label htmlFor="pay-online" className="text-lg font-bold">Pay Online</label>
               </RadioGroup>
             </div>
-            <div className="flex gap-6 my-4">
-              <Image src="/assets/images/mastercard.png" alt="Mastercard" width={146} height={60} unoptimized />
-              <Image src="/assets/images/visa.png" alt="Visa" width={146} height={60} unoptimized />
-              <Image src="/assets/images/rupay.png" alt="Rupay" width={146} height={60} unoptimized />
-              <Image src="/assets/images/discover.png" alt="Discover" width={146} height={60} unoptimized />
+            <div className="flex gap-6 my-4 flex-wrap">
+              <Image src="/assets/images/mastercard.png" alt="Mastercard" width={146} height={60} unoptimized className=''/>
+              <Image src="/assets/images/visa.png" alt="Visa" width={146} height={60} unoptimized className=''/>
+              <Image src="/assets/images/rupay.png" alt="Rupay" width={146} height={60} unoptimized className=''/>
+              <Image src="/assets/images/discover.png" alt="Discover" width={146} height={60} unoptimized className=''/>
             </div>
             <FormField
               control={form.control}

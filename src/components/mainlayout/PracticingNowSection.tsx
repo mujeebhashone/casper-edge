@@ -3,7 +3,7 @@ import PracticeSection from './PracticeSection'
 
 const PracticingNowSection = () => {
   return (
-    <section className="w-full bg-[#FFF6F6] rounded-2xl px-2 py-12 md:py-16 flex flex-col items-center justify-between font-sans">
+    <section className="w-full bg-[#FFF6F6] rounded-2xl px-2 py-12 md:py-16 flex flex-col items-center justify-between font-sans relative z-[999999]">
 
 
     <PracticeSection

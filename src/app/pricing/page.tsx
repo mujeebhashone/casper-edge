@@ -7,8 +7,8 @@ import React from 'react'
 const page = () => {
   return (
     <WebLayout>
-        <div className='bg-white relative w-full h-[65vh] mb-40'>
-    <PricingSection className='absolute -bottom-40 left-0 w-full' />
+        <div className='bg-white md:relative w-full h-full md:h-[65vh] md:mb-40'>
+    <PricingSection className='md:absolute md:-bottom-10 md:left-0 w-full' />
     </div>
     <NewsLetter />
     </WebLayout>
