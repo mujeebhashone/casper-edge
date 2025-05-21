@@ -1,7 +1,10 @@
+'use client'
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Home, BookOpen, History, Layers, ClipboardList, Settings } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 
 const navItems = [
@@ -13,6 +16,7 @@ const navItems = [
 ];
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
   return (
     <div className="min-h-screen bg-[#FDF5F4] flex font-sans py-10">
       {/* Sidebar */}
@@ -28,7 +32,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
               <Link
                 key={label}
                 href={href}
-                className="flex items-center gap-3 px-6 py-3 text-lg transition-colors text-[#0C0E12] hover:bg-secondary hover:text-white border-b border-[#E5E5E5]"
+                className={`flex items-center gap-3 ${pathname === href ? 'bg-secondary text-white' : ''} px-6 py-3 text-lg transition-colors text-[#0C0E12] hover:bg-secondary hover:text-white border-b border-[#E5E5E5]`}
                 // TODO: Add active state logic
               >
                 <Icon className="w-5 h-5" />
@@ -40,7 +44,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         {/* Settings */}
         <div className="">
        
-          <Link href="/settings" className="flex items-center hover:rounded-b-lg gap-3 px-3 py-2 text-lg text-[#0C0E12] hover:bg-secondary hover:text-white">
+          <Link href="/settings" className={`flex items-center hover:rounded-b-lg gap-3 px-3 py-2 text-lg text-[#0C0E12] hover:bg-secondary hover:text-white ${pathname === '/settings' ? 'bg-secondary text-white' : ''}`}>
             <Settings className="w-5 h-5" />
             Settings
           </Link>

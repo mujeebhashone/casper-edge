@@ -13,23 +13,23 @@ export interface TailoredSupportProps {
   className?: string;
 }
 
-const defaultFeatures = [
-  'Application Strategy & Essay Editing',
-  'Interview Preparation',
-  'Pre-Med Advising & Gap Year Planning',
-  'Reapplication Support',
-];
+// const defaultFeatures = [
+//   'Application Strategy & Essay Editing',
+//   'Interview Preparation',
+//   'Pre-Med Advising & Gap Year Planning',
+//   'Reapplication Support',
+// ];
 
 const TailoredSupport: React.FC<TailoredSupportProps> = ({
   heading = (
     <>
-      Tailored Support for Every Step<br />of Your Medical School Journey
+      The Problem
     </>
   ),
   description = (
     <>Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance.</>
   ),
-  features = defaultFeatures,
+  features = [],
   imageSrc = '/assets/images/doctorimage.png',
   imageAlt = 'Doctor',
   imageWidth = 475,

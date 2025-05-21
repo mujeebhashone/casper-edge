@@ -3,16 +3,16 @@ import Link from 'next/link'
 
 const Banner = () => {
   return (
-    <section className="w-full bg-white rounded-b-xl px-12 py-40 flex flex-col gap-y-12 md:gap-y-0 md:flex-row items-center justify-between md:gap-x-12 min-h-[420px]">
+    <section className="w-full mb-10 bg-white rounded-b-xl px-12 py-40 flex flex-col gap-y-12 md:gap-y-0 md:flex-row items-center justify-between md:gap-x-12 min-h-[420px]">
       {/* Left Side */}
       <div className="flex-1 max-w-xl">
         <h1 className="text-5xl font-semibold leading-tight text-primary mb-6 font-sans">
-          Get Into Your Dream<br />
-          Medical School with<br />
-          Expert Guidance
+          World-Class CASPer Prep,
+          Designed by Doctors Trained
+          At Stanford and Harvard
         </h1>
         <p className="text-lg text-gray-500 mb-8 font-sans">
-          Our cutting-edge AI transforms clinical research, boosting efficiency and simplifying workflows to advance human health.
+        The smartest way to prep for CASPer
         </p>
         <Link href="#" className="bg-secondary font-sans text-secondary-foreground rounded-full px-7 py-3 font-semibold text-base shadow inline-block">
           Start Practice

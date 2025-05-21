@@ -4,11 +4,12 @@ import React from 'react';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Plus, Minus } from 'lucide-react';
 import NewsLetter from './NewsLetter';
+import Link from 'next/link';
 
 
 export interface FaqItem {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
 }
 
 export interface FaqProps {
@@ -17,25 +18,88 @@ export interface FaqProps {
 
 const defaultFaq: FaqItem[] = [
   {
-    question: 'How do I get started with Cracking Med Admissions?',
-    answer:
-      `Just schedule a free consultation using the button above, or contact us directly through the form. We'll learn more about your goals and recommend the best path forward.`,
+    question: 'Who is Dr. Rachel Rizal and Dr. Rishi Mediratta?',
+    answer: (
+      <>
+        <p>Dr. Rachel Rizal and Dr. Rishi Mediratta are medical school admissions experts who created the CASPer Edge course. They are passionate about mentorship and teaching. They have advised tens of thousands of students over 12+ years get accepted into medical schools and residency programs.</p>
+        <br />
+        <p>
+          After reviewing countless CASPer prep options, they realized there was a major gap—no resource offered personalized feedback or truly high-quality guidance. So, they created CASPer Edge: a strategic, feedback-driven individualized prep course designed to help applicants excel.
+        </p>
+        <br />
+        <p>
+          Dr. Rachel Rizal and Dr. Rishi Mediratta care deeply about excellence and believe every applicant deserves access to high-yield tools. They were educated at some of the world&apos;s best universities, including Princeton, Johns Hopkins, Stanford, and Harvard. CASPer Edge reflects their belief that when it comes to admissions, nothing short of exceptional should be the standard.
+        </p>
+      </>
+    ),
   },
   {
-    question: 'Who will I be working with?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    question: 'What makes CASPer Edge different from other prep resources?',
+    answer: (
+      <>
+        <p>Most free resources give you sample questions but no personalized feedback. CASPer Edge delivers physician-designed strategies, 100+ realistic scenarios, individualized scoring, and feedback tailored to your exact responses—so you know exactly how to improve. </p>
+        <br />
+        <p>
+          The course was created completely by Dr. Rachel Rizal and Dr. Rishi Mediratta. They always strive for excellence and have been providing excellent resources for premeds for over a decade. CASPer Edge is the best CASPer test prep you will find. 
+        </p>
+      </>
+    ),
   },
   {
-    question: 'Do you only help with U.S. medical schools?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    question: 'Do I really need to prepare for CASPer?',
+    answer: (
+      <>
+        <p>Yes—because getting into medical school is more competitive than ever. A strong CASPer score can be the difference between landing an interview or getting screened out early.</p>
+        <br />
+        <p>
+          You only get one shot at making a great impression. Admissions committees use CASPer to evaluate traits like judgment, empathy, and communication under pressure—qualities that numbers alone can&apos;t capture.
+        </p>
+        <br />
+        <p>
+          With the right preparation, you can train these skills, reduce test-day anxiety, and stand out from other applicants. Don&apos;t leave your med school future to chance.
+        </p>
+      </>
+    ),
   },
   {
-    question: 'What makes your service different?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    question: 'How does the personalized CASPer Feedback work?',
+    answer: (
+      <>
+        <p>Our feedback is extremely comprehensive.</p>
+        <br />
+        <p>
+          You will receive comments on &quot;what you did well&quot; and &quot;what you can improve.&quot; If you receive a grade that is below an &quot;A,&quot; you will also receive a refined answer using ideas and elements from the answer you gave. The refined answer will give you a more ideal answer for receiving a higher score.
+        </p>
+        <br />
+        <p>
+          If you are on tutor mode using the Scenario Bank, you&apos;ll get instant, personalized feedback based on our CASPer scoring criteria after each scenario you complete. If you are on test mode, you will receive feedback after the entire practice test or after a block of Scenario Bank questions.
+        </p>
+        <br />
+        <p>
+          <Link href="/pricing" className="text-secondary font-semibold">Sign up now.</Link>
+        </p>
+      </>
+    ),
   },
   {
-    question: 'Do you help reapplicants?',
-    answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    question: 'Can I try CASPer Edge before paying?',
+    answer: (
+      <>
+        <p>Yes! You can try CASPer Edge completely free with access to 2 full practice scenarios—including instant scoring and personalized feedback.</p>
+        <br />
+        <p>
+          <Link href="/practice-questions" className="text-secondary font-semibold">Try Free Practice</Link>
+        </p>
+        <br />
+        <p>
+          It&apos;s the best way to see our the platform works, understand how your answers are evaluated, and experience the difference that CASPer Edge prep can make.
+        </p>
+      </>
+    ),
+  },
+  {
+    question: 'Is there a refund policy or guarantee?',
+    answer: "We can promise is that CASPer Edge is the most comprehensive, high-quality prep resources available. We&apos;ve designed this course to give you every opportunity to succeed. And, we completely recommend for you to take the complete the entire CASPer Edge Course, refine your test strategies with our Scenario Bank, and emulate test day with the CASPer Edge practice tests. However, there are many variables out of our control similar to medical school admissions. As such, there is no score guarantee."
   },
 ];
 
