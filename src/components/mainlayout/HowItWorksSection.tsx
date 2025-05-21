@@ -48,7 +48,7 @@ const HowItWorksSection = () => (
           </div>
           {/* Image with colored ring */}
           {/* <div className="rounded-2xl overflow-hidden mb-6 mt-6 shadow-lg bg-white flex items-center justify-center relative ring-4 ring-[#F8D2D2] group-hover:ring-[#DA3539] transition-all"> */}
-            <Image src={step.image} alt={step.alt} width={200} height={200} unoptimized className="object-cover w-full h-[300px]" />
+            <Image src={step.image} alt={step.alt} width={200} height={200} unoptimized className="object-contain w-full h-[300px]" />
           {/* </div> */}
           <div className="text-xl font-bold text-secondary text-center mb-1 mt-2 px-4">{step.title}</div>
          
