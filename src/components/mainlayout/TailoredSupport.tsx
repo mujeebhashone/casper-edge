@@ -10,6 +10,7 @@ export interface TailoredSupportProps {
   imageAlt?: string;
   imageWidth?: number;
   imageHeight?: number;
+  className?: string;
 }
 
 const defaultFeatures = [
@@ -33,8 +34,9 @@ const TailoredSupport: React.FC<TailoredSupportProps> = ({
   imageAlt = 'Doctor',
   imageWidth = 475,
   imageHeight = 382,
+  className = '',
 }) => (
-  <section className="bg-white rounded-2xl px-8 py-12 md:px-28 md:py-28 flex flex-col md:flex-row items-center gap-10 md:gap-16 shadow-lg w-full font-sans mt-10">
+  <section className={`bg-white rounded-2xl px-8 py-12 md:px-28 md:py-28 flex flex-col md:flex-row items-center gap-10 md:gap-16 shadow-lg w-full font-sans mt-10 ${className}`}>
     {/* Left Side */}
     <div className="flex-1 max-w-xl">
       <h3 className="text-3xl md:text-4xl font-semibold text-primary font-sans leading-tight mb-6">
