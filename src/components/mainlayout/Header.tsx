@@ -24,7 +24,9 @@ const Header = () => {
       <div className="flex items-center justify-between w-full">
         {/* Logo Section */}
         <div className="flex items-center gap-3">
+          <Link href="/">
           <Image src="/assets/images/logo-casper.png" alt="Stethoscope" width={120} height={40} unoptimized className="w-[120px] md:w-[272px] h-auto" />
+          </Link>
         </div>
         {/* Nav Links (Desktop) */}
         <nav className="hidden md:flex gap-10 text-base font-normal">
