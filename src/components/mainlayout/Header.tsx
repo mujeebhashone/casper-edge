@@ -30,7 +30,7 @@ const Header = () => {
         </div>
         {/* Nav Links (Desktop) */}
         <nav className="hidden md:flex gap-10 text-base font-normal">
-          <Link href="/practiice-questions" className="text-primary no-underline">Practice Questions</Link>
+          <Link href="/practice-questions" className="text-primary no-underline">Practice Questions</Link>
           <Link href="/pricing" className="text-primary no-underline">Pricing</Link>
           <Link href="/testimonials" className="text-primary no-underline">Testimonials</Link>
           <Link href="/blog" className="text-primary no-underline">Blog</Link>

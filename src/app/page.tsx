@@ -9,6 +9,7 @@ import PracticingNowSection from "@/components/mainlayout/PracticingNowSection";
 import Faq from "@/components/mainlayout/Faq";
 import TailoredSupport from "@/components/mainlayout/TailoredSupport";
 import SectionHeading from "@/components/mainlayout/SectionHeading";
+import HowItWorksSection from '@/components/mainlayout/HowItWorksSection';
 
 function useIsDesktop() {
   const [isDesktop, setIsDesktop] = React.useState(false);
@@ -61,16 +62,18 @@ export default function Home() {
           <Banner/>
         
         
-            <div className='w-full bg-white rounded-xl px-12 py-16'>
+            <div className='w-full bg-white rounded-xl px-12 py-16 mb-12'>
             <SectionHeading />
             {isDesktop ? (
               <>
                 <StickyScrollSection index={0}>
                   <TailoredSupport
-                    heading="Tailored Support for Every Step of Your Medical School Journey"
-                    description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
-                    features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning', 'Reapplication Support']}
-                    imageSrc="/assets/images/doctorimage.png"
+                    heading="The Problem"
+                    description={<>Most Students Guess. CASPer Edge Students Know. The CASPer test is high-stakes—but most applicants are flying blind. They&apos;ve watched YouTube videos, skimmed blogs, maybe even tried the official sample test—yet still don&apos;t know if their answers are strong enough.<br/> That&apos;s where CASPer Edge changes the game. Developed by Stanford- and Harvard-trained physicians, it&apos;s the only prep program that combines expert scenario strategy with personalized feedback. You are not just practicing, but you are improving with every session.</>}
+
+
+                    
+                    imageSrc="/assets/images/richal.jpg"
                     imageAlt="Doctor"
                     imageWidth={475}
                     imageHeight={382}
@@ -78,9 +81,9 @@ export default function Home() {
                 </StickyScrollSection>
                 <StickyScrollSection index={1}>
                   <TailoredSupport
-                    heading="Tailored Support for Every Step of Your Medical School Journey"
-                    description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
-                    features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
+                    heading="Powerful CASPer Prep"
+                    description="CASPer Prep Simplified Into 3 Powerful Pillars"
+                    features={['CASPer Edge Course', 'CASPer Edge Scenario Bank', 'CASPer Edge Practice Tests']}
                     imageSrc="/assets/images/casper-dashboard.png"
                     imageAlt="Casper Dashboard"
                     imageWidth={475}
@@ -89,16 +92,16 @@ export default function Home() {
                 </StickyScrollSection>
                 <StickyScrollSection index={2}>
                   <TailoredSupport
-                    heading="Tailored Support"
-                    description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
-                    features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
+                    heading="CASPer Edge Feedback Loop"
+                    description="After every response, our AI delivers detailed, personalized feedback. You'll know exactly how your response ranks for communication, ethics, empathy, and judgment. You'll get targeted advice to boost your score fast."
+                    features={['Individualized scoring per question', 'Track your improvement over time', 'Fix your weaknesses, fast', 'Practice again and improve']}
                     imageSrc="/assets/images/interview.png"
                     imageAlt="Interview"
                     imageWidth={475}
                     imageHeight={382}
                   />
                 </StickyScrollSection>
-                <StickyScrollSection index={3}>
+                {/* <StickyScrollSection index={3}>
                   <TailoredSupport
                     heading="Tailored Support"
                     description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
@@ -108,7 +111,7 @@ export default function Home() {
                     imageWidth={475}
                     imageHeight={382}
                   />
-                </StickyScrollSection>
+                </StickyScrollSection> */}
                 
                 
           <PricingSection />
@@ -120,25 +123,33 @@ export default function Home() {
               </>
             ) : (
               <>
+               <TailoredSupport
+                    heading="The Problem"
+                    description={<>Most Students Guess. CASPer Edge Students Know. The CASPer test is high-stakes—but most applicants are flying blind. They&apos;ve watched YouTube videos, skimmed blogs, maybe even tried the official sample test—yet still don&apos;t know if their answers are strong enough.<br/> That&apos;s where CASPer Edge changes the game. Developed by Stanford- and Harvard-trained physicians, it&apos;s the only prep program that combines expert scenario strategy with personalized feedback. You are not just practicing, but you are improving with every session.</>}
+                    imageSrc="/assets/images/doctorimage.png"
+                    imageAlt="Doctor"
+                    imageWidth={475}
+                    imageHeight={382}
+                  />
+                 <TailoredSupport
+                    heading="Powerful CASPer Prep"
+                    description="CASPer Prep Simplified Into 3 Powerful Pillars"
+                    features={['CASPer Edge Course', 'CASPer Edge Scenario Bank', 'CASPer Edge Practice Tests']}
+                    imageSrc="/assets/images/casper-dashboard.png"
+                    imageAlt="Casper Dashboard"
+                    imageWidth={475}
+                    imageHeight={382}
+                  />
                 <TailoredSupport
-                  heading="Tailored Support for Every Step of Your Medical School Journey"
-                  description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
-                  features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning', 'Reapplication Support']}
-                  imageSrc="/assets/images/doctorimage.png"
-                  imageAlt="Doctor"
-                  imageWidth={475}
-                  imageHeight={382}
-                />
-                <TailoredSupport
-                  heading="Tailored Support for Every Step of Your Medical School Journey"
-                  description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
-                  features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
-                  imageSrc="/assets/images/casper-dashboard.png"
-                  imageAlt="Casper Dashboard"
-                  imageWidth={475}
-                  imageHeight={382}
-                />
-                <TailoredSupport
+                    heading="CASPer Edge Feedback Loop"
+                    description="After every response, our AI delivers detailed, personalized feedback. You'll know exactly how your response ranks for communication, ethics, empathy, and judgment. You'll get targeted advice to boost your score fast."
+                    features={['Individualized scoring per question', 'Track your improvement over time', 'Fix your weaknesses, fast', 'Practice again and improve']}
+                    imageSrc="/assets/images/interview.png"
+                    imageAlt="Interview"
+                    imageWidth={475}
+                    imageHeight={382}
+                  />
+                {/* <TailoredSupport
                   heading="Tailored Support"
                   description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
                   features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
@@ -146,16 +157,7 @@ export default function Home() {
                   imageAlt="Interview"
                   imageWidth={475}
                   imageHeight={382}
-                />
-                <TailoredSupport
-                  heading="Tailored Support"
-                  description="Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance."
-                  features={['Application Strategy & Essay Editing', 'Interview Preparation', 'Pre-Med Advising & Gap Year Planning']}
-                  imageSrc="/assets/images/interview.png"
-                  imageAlt="Interview"
-                  imageWidth={475}
-                  imageHeight={382}
-                />
+                /> */}
                 <PricingSection/>
                 <PracticingNowSection />
               </>
@@ -169,8 +171,8 @@ export default function Home() {
           <PracticingNowSection />
         </StickyScrollSection> */}
       
-          <Faq />
-           
+        <HowItWorksSection />
+        <Faq />
         
         
        
