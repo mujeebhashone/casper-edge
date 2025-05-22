@@ -21,20 +21,14 @@ export interface TailoredSupportProps {
 // ];
 
 const TailoredSupport: React.FC<TailoredSupportProps> = ({
-  heading = (
-    <>
-      The Problem
-    </>
-  ),
-  description = (
-    <>Whether you&apos;re just starting your pre-med path or reapplying after a previous cycle, our expert team offers personalized guidance to maximize your chances of acceptance.</>
-  ),
+  heading ,
+  description ,
   features = [],
-  imageSrc = '/assets/images/doctorimage.png',
-  imageAlt = 'Doctor',
-  imageWidth = 475,
-  imageHeight = 382,
-  className = '',
+  imageSrc,
+  imageAlt,
+  imageWidth ,
+  imageHeight,
+  className 
 }) => (
   <section className={`bg-white rounded-2xl px-8 py-12 md:px-28 md:py-28 flex flex-col md:flex-row items-center gap-10 md:gap-16 shadow-lg w-full font-sans mt-10 ${className}`}>
     {/* Left Side */}
@@ -60,12 +54,13 @@ const TailoredSupport: React.FC<TailoredSupportProps> = ({
     <div className="flex-1 flex justify-center items-center">
       <div className="w-[340px] h-[270px] md:w-[475px] md:h-[382px] rounded-xl overflow-hidden">
         <Image
-          src={imageSrc}
-          alt={imageAlt}
-          width={imageWidth}
-          height={imageHeight}
+          src={imageSrc || ''}
+          alt={imageAlt || ''}
+          width={imageWidth || 0}
+          height={imageHeight || 0}
           className="object-cover w-full h-full rounded-xl"
-          priority
+          loading="lazy"
+          
         />
       </div>
     </div>
