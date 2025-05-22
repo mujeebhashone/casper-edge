@@ -73,7 +73,7 @@ export default function Home() {
 
 
                     
-                    imageSrc="/assets/images/richal.jpg"
+                    imageSrc="/assets/images/richal.JPG"
                     imageAlt="Doctor"
                     imageWidth={475}
                     imageHeight={382}
@@ -126,7 +126,7 @@ export default function Home() {
                <TailoredSupport
                     heading="The Problem"
                     description={<>Most Students Guess. CASPer Edge Students Know. The CASPer test is high-stakes—but most applicants are flying blind. They&apos;ve watched YouTube videos, skimmed blogs, maybe even tried the official sample test—yet still don&apos;t know if their answers are strong enough.<br/> That&apos;s where CASPer Edge changes the game. Developed by Stanford- and Harvard-trained physicians, it&apos;s the only prep program that combines expert scenario strategy with personalized feedback. You are not just practicing, but you are improving with every session.</>}
-                    imageSrc="/assets/images/richal.jpg"
+                    imageSrc="/assets/images/richal.JPG"
                     imageAlt="Doctor"
                     imageWidth={475}
                     imageHeight={382}

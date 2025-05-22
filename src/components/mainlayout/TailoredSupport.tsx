@@ -54,10 +54,10 @@ const TailoredSupport: React.FC<TailoredSupportProps> = ({
     <div className="flex-1 flex justify-center items-center">
       <div className="w-[340px] h-[270px] md:w-[475px] md:h-[382px] rounded-xl overflow-hidden">
         <Image
-          src={imageSrc}
-          alt={imageAlt}
-          width={imageWidth}
-          height={imageHeight}
+          src={imageSrc || ''}
+          alt={imageAlt || ''}
+          width={imageWidth || 0}
+          height={imageHeight || 0}
           className="object-cover w-full h-full rounded-xl"
           loading="lazy"
           
