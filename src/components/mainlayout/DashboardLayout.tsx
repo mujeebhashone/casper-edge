@@ -3,15 +3,17 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Home, BookOpen, History, Layers, ClipboardList, Settings } from 'lucide-react';
+import { Home, BookOpen, History, Layers, ClipboardList, Settings, BarChart } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 
 const navItems = [
   { label: 'Dashboard', icon: Home, href: '/dashboard' },
-  { label: 'Question Bank', icon: BookOpen, href: '/question-bank' },
-  { label: 'Practice History', icon: History, href: '/practice-history' },
   { label: 'Course', icon: Layers, href: '/courses' },
+  { label: 'Scenario Bank', icon: BookOpen, href: '/scenario-bank' },
+  { label: 'Practice Test', icon: History, href: '/practice-test' },
+  { label: 'Performance', icon: BarChart, href: '/performance' },
+
   { label: 'Your Plan', icon: ClipboardList, href: '/your-plan' },
 ];
 

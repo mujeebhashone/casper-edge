@@ -50,6 +50,19 @@ const modules = [
 
 const poster = '/assets/images/practiceimage.png';
 
+const qna = [
+  {
+    question: 'Simply dummy text of the printing and typesetting industry?',
+    answer:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+  {
+    question: 'Simply dummy text of the printing and typesetting industry?',
+    answer:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+  },
+];
+
 const CoursesPage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -70,11 +83,11 @@ const CoursesPage = () => {
           <h1 className="text-4xl font-bold text-primary mb-1">Course</h1>
         </div>
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Video Player */}
-          <div className="flex-1 flex flex-col">
+          {/* Video Player + Q&A */}
+          <div className="flex-1 flex flex-col gap-6">
             <Card className="p-4 bg-white border-0 shadow-md rounded-xl flex-1 flex justify-center items-center">
               <div
-                className="relative w-full max-w-3xl aspect-video rounded-2xl overflow-hidden border-2 border-[#F3F3F3] shadow-lg"
+                className="relative w-full aspect-video rounded-2xl overflow-hidden border-2 border-[#F3F3F3] shadow-lg"
                 style={{
                   backgroundImage: !isPlaying ? `url(${poster})` : undefined,
                   backgroundSize: 'cover',
@@ -106,11 +119,25 @@ const CoursesPage = () => {
                 )}
               </div>
             </Card>
+            {/* Q&A Section */}
+            <div className="flex flex-col gap-6 mt-2">
+              {qna.map((item, idx) => (
+                <div key={idx}>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-xl font-bold text-[#0C0E12]">Q{idx + 1}</span>
+                    <span className="text-lg font-bold text-[#0C0E12]">{item.question}</span>
+                  </div>
+                  <div className="bg-white rounded-xl shadow-sm p-4 text-[#656565] text-base font-normal">
+                    {item.answer}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
           {/* Sidebar Modules */}
-          <aside className="w-full lg:w-[500px] flex-shrink-0">
+          <aside className="w-full lg:w-[450px] flex-shrink-0">
             <Card className="p-6 bg-white border-0 shadow-md rounded-xl flex flex-col">
-              <h2 className="text-xl font-bold text-[#0C0E12] mb-2">Course name</h2>
+              <h2 className="text-xl font-bold text-[#0C0E12] mb-2">CASPer Edge Course</h2>
               <div className="text-[#7B7B7B] text-base font-semibold mb-4">Modules</div>
               <div className="flex flex-col gap-3 overflow-auto flex-1 min-h-0">
                 {modules.map((mod, i) => (
